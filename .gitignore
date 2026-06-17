@@ -1,0 +1,18 @@
+# Dépendances PHP (Dompdf)
+vendor/
+
+# Données dynamiques de l'application
+uploads/pdfs/*
+uploads/videos/*
+uploads/certificates/*
+!uploads/pdfs/.gitkeep
+!uploads/videos/.gitkeep
+!uploads/certificates/.gitkeep
+
+# Fichiers de configuration sensibles et Logs
+.env
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
