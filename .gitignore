@@ -1,18 +1,16 @@
-# Dépendances PHP (Dompdf)
+# Composer
 vendor/
+composer.lock
 
-# Données dynamiques de l'application
-uploads/pdfs/*
-uploads/videos/*
-uploads/certificates/*
-!uploads/pdfs/.gitkeep
-!uploads/videos/.gitkeep
-!uploads/certificates/.gitkeep
+# Uploads
+uploads/pdfs/
+uploads/videos/
+uploads/certificates/
 
-# Fichiers de configuration sensibles et Logs
-.env
+# Logs
 *.log
 
-# Fichiers système
+# Système
 .DS_Store
 Thumbs.db
+.env
