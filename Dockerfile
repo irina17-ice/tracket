@@ -4,7 +4,8 @@ FROM php:8.2-apache
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
-    && docker-php-ext-install pdo_mysql zip
+    libpq-dev \
+    && docker-php-ext-install pdo_mysql pdo_pgsql zip
 
 # Activer mod_rewrite
 RUN a2enmod rewrite
@@ -14,7 +15,7 @@ RUN mkdir -p /var/www/html/uploads/pdfs \
     /var/www/html/uploads/videos \
     /var/www/html/uploads/certificates
 
-# Copier TOUS les fichiers
+# Copier les fichiers
 COPY . /var/www/html/
 
 # Donner les permissions
